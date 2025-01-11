@@ -81,8 +81,9 @@ a {
 /* hero- styles here  */
 .hero-section {
     padding: 100px 0 0px;
-    display: flex;align-items: center;
-    /* min-height: ; */
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 126px - 70px);
     background-color: #f2f6f7;
 }
 .hero-section h1 {
