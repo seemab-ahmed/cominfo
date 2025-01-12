@@ -1,6 +1,6 @@
 AOS.init({
   duration: 1000, // Animation duration in milliseconds
-  easing: 'ease-in-out', // Animation easing
+  easing: "ease-in-out", // Animation easing
   once: true, // Whether animation should happen only once
   mirror: false, // Whether elements should animate out while scrolling past them
 });
@@ -68,14 +68,30 @@ $(document).ready(function () {
       },
     ],
   });
+  $("#videoModal").on("shown.bs.modal", function () {
+    successSlick.slick("slickPause");
+    $("#videoPlayer")[0].play();
+  });
+
+  $("#close_btn").click(function () {
+    successSlick.slick("slickPlay");
+    $("#videoPlayer")[0].pause();
+    $("#videoModal").modal("hide");
+  });
+
+  $(".success_box").click(function () {
+    var videoPath = $(this).data("video");
+    $("#videoPlayer").attr("src", videoPath);
+    $("#videoModal").modal("show");
+  });
   // Demo Slider
-  $(".demo_slider_box").slick({
+  $(".demo-slider").slick({
     dots: false,
     infinite: true,
     draggable: true,
-    speed: 800,
+    speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     pauseOnHover: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -89,8 +105,8 @@ $(document).ready(function () {
       },
     ],
   });
-   // Success Slick Slider
-   $(".success_slick").slick({
+  // Success Slick Slider
+  $(".success_slick").slick({
     dots: false,
     infinite: true,
     draggable: true,
@@ -104,15 +120,18 @@ $(document).ready(function () {
     nextArrow: '<div class="slick-next custom_slick_next_success"></div>',
     responsive: [
       { breakpoint: 768, settings: { arrows: false, slidesToShow: 2 } },
-      { breakpoint: 480, settings: { arrows: false, slidesToShow: 1, dots: true } },
+      {
+        breakpoint: 480,
+        settings: { arrows: false, slidesToShow: 1, dots: true },
+      },
     ],
   });
   // Demo Iframe Handling
-  $(".demo_slider_box img").on("click", function () {
+  $(".demo-slider img").on("click", function () {
     const clickedDataId = $(this).data("id");
-    $(".demo_slider_box img").removeClass("showBorder");
+    $(".demo-slider img").removeClass("showBorder");
     $(this).addClass("showBorder");
-    $(".demo_iframe").hide();
+    $(".demo-iframe").hide();
     $("#" + clickedDataId + "_iframe").show();
   });
 });
