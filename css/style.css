@@ -226,13 +226,11 @@ a {
     left: 14px;
     top: 14px;
 }
-
-.service-box h5 {
+.service-box .service-subtitle {
     font-weight: 500;
     font-size: 18px;
     color: #ee5b25;
 }
-
 .service-box p {
     margin-bottom: 0;
     font-size: 14px;
