@@ -23,9 +23,9 @@ a {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    color: #f05b29;
+    color: #ee5b25;
     padding: 10px 30px 12px;
-    border: 1px solid #f05b29;
+    border: 1px solid #ee5b25;
     text-transform: capitalize;
     background: transparent;
     display: inline-block;
@@ -62,30 +62,21 @@ a {
         background-position: left bottom;
     }
 }
-#scrollToTopBtn {
+.arrow-top {
     border-radius: 100px;
     bottom: 20px;
     color: #ee5b25;
     background-color: #ee5b25;
-    cursor: pointer;
     height: 32px;
     position: fixed;
     right: 20px;
     width: 32px;
     z-index: 999;
     padding: 3px;
-    border: none;
-    display: none;
 }
-
-#scrollToTopBtn img {
+.arrow-top img {
     width: 30px;
 }
-.main_top_wrapper{
-    position: relative;
-    height: 100vh;
-}
-
 /* hero- styles here  */
 .hero-section {
     padding: 100px 0 0px;
@@ -289,10 +280,8 @@ a {
     padding: 50px 0;
     overflow: hidden;
 }
-.testimonial-item {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+.testimonials-section .slick-slide {
+    padding: 10px;
 }
 .testimonial-card {
     background: #fffefe;
@@ -303,6 +292,7 @@ a {
     box-shadow: 0 4px 8px #100f0f9b;
     transition: transform 0.3s;
     overflow: hidden;
+    /* display: block !important; */
 }
 .testimonial-card::before {
     content: "";
@@ -374,7 +364,7 @@ a {
 .testimonials-section .slick-dots li button {
     opacity: 0;
 }
-.latest_slick {
+.news-slider {
     margin-bottom: 60px;
 }
 .grey_bg {
@@ -537,32 +527,32 @@ a {
     padding: 80px 0;
     background: #F1F4F5;
 }
-.footer_main {
-    background-image: url('../images/background/footer_bg.png');
+.footer {
+    background-image: url('../images/background/footer_bg.webp');
     background-size: cover;
     background-position: center;
     padding-top: 0px;
 }
-.footer_logo {
+.footer-logo {
     text-align: center;
     border-bottom: 1px solid #fff;
     padding: 15px;
     margin-bottom: 20px;
 }
 
-.footer_logo img {
+.footer-logo img {
     width: 180px;
     margin-bottom: 15px;
 }
 
-.footer_logo p {
+.footer-logo p {
     color: #fff;
     max-width: 750px;
     margin: auto;
     font-size: 13px;
 }
 
-.footer_left {
+.footer-col {
     display: flex;
     color: #fff;
     gap: 15px;
@@ -571,23 +561,23 @@ a {
     margin-bottom: 20px;
 }
 
-.footer_left h6 {
+.footer-col h6 {
     margin-bottom: 0;
     font-weight: 700;
     font-size: 15px;
 }
 
-.footer_left p {
+.footer-col p {
     margin-bottom: 0;
     font-size: 12px;
 }
 
-.footer_left p a {
+.footer-col p a {
     color: #fff;
     text-decoration: none;
 }
 
-.footer_left img {
+.footer-col img {
     width: 17px;
     height: 17px;
     object-fit: contain;
@@ -645,16 +635,15 @@ a {
     align-items: center;
 }
 
-.social_icon span svg {
+.social_icon span i {
     color: #f0521b;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .social_icon {
     display: flex;
     gap: 10px;
 }
-
 .copy_rights p {
     margin-bottom: 0;
     font-size: 14px;
@@ -810,21 +799,28 @@ nav.notFixed {
     font-size: 15px;
     margin-bottom: 5px;
 }
-.latest_news {
+.news-slider .slick-slide {
+    padding: 20px 10px;
+}
+.news-card {
     padding: 20px 25px;
     z-index: 99;
     background-color: #fbfbfb;
     position: relative;
     min-height: 200px;
-    margin: 20px 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
-
+    transition: all 0.5s ease-in-out;
 }
-.latest_news img {
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.4) 0px 2px 6px 2px;
+}
+.news-card img {
     position: absolute;
     bottom: 15px;
     right: 10px;
+    width: 50px;
 }
 .loader {
     text-align: center;
@@ -1010,13 +1006,13 @@ nav.notFixed {
     margin-bottom: 40px;
 }
 
-.success_main {
+.latest-news {
     position: relative;
     padding: 0;
     overflow: hidden;
 }
 
-.success_main h1 {
+.latest-news h1 {
     font-size: 45px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -1106,7 +1102,7 @@ nav.notFixed {
     left: 19px;
 } */
 
-.success_main .orange_box {
+.latest-news .orange_box {
     width: 55px;
     height: 50px;
     background-color: #fff;
@@ -1114,20 +1110,20 @@ nav.notFixed {
     min-width: 55px;
 }
 
-.success_main h6 span {
+.latest-news h6 span {
     color: #ee5b25;
 }
 
-.success_main h6 {
+.latest-news h6 {
     font-weight: 600;
 }
 
-.success_main p {
+.latest-news p {
     font-size: 13px;
     margin-top: 15px;
 }
 
-.success_main a {
+.latest-news a {
     background-color: #ee5b25;
     color: #fff;
     border-radius: 30px;
@@ -1142,7 +1138,7 @@ nav.notFixed {
     cursor: pointer;
 }
 
-.success_main a:hover {
+.latest-news a:hover {
     color: #fff;
 }
 
@@ -1190,18 +1186,18 @@ nav.notFixed {
     margin-bottom: 75px !important;
 }
 
-.success_main .slick-prev {
+.latest-news .slick-prev {
     left: 25px;
     top: 115%;
 }
 
-.success_main .slick-next {
+.latest-news .slick-next {
     right: 0;
     top: 115%;
     left: 8%;
 }
 
-.success_main .slick-dots {
+.latest-news .slick-dots {
     bottom: -40px;
 }
 
@@ -1293,7 +1289,7 @@ nav.notFixed {
     font-weight: 500;
     margin-bottom: 40px;
 }
-.team_box {
+.team-card {
     background-color: #fbfbfb;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
@@ -1302,13 +1298,13 @@ nav.notFixed {
     height: 100%;
     transition: all 0.5s ease-in-out;
 }
-.team_box:hover {
+.team-card:hover {
     transform: translateY(-10px);
     box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px, rgba(60, 64, 67, 0.4) 0px 2px 6px 2px;
 
 }
 
-.team_box::before {
+.team-card::before {
     content: '';
     width: 50px;
     height: 50px;
@@ -1318,7 +1314,7 @@ nav.notFixed {
     left: 14px;
 }
 
-.user_div {
+.user-name-rank {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -1328,18 +1324,20 @@ nav.notFixed {
     z-index: 1;
     padding: 10px 10px 10px;
 }
-.user_div h5 {
+.user-name {
     margin-bottom: 0;
     font-size: 19px;
     font-weight: 600;
 }
-.user_div h6 {
+.user-rank {
     margin-bottom: 0;
     font-size: 12px;
+    font-weight: 600;
 }
-.team_box p {
+.user-detail {
     font-size: 15px;
     margin-bottom: 0;
+    color: rgb(57, 71, 103);;
 }
 .technology-section {
     padding: 40px 0;
@@ -1483,7 +1481,7 @@ nav.notFixed {
     .client-logo2 {
         width: 20% !important;
     }
-    .success_main .slick-next {
+    .latest-news .slick-next {
         left: 7% !important;
     }
     .slick-next {
@@ -1492,11 +1490,15 @@ nav.notFixed {
     .slick-prev {
         left: 0px !important;
     }
-    .latest_news {
+    .news-card {
         min-height: 270px !important;
     }
     .success_box {
         min-height: 100% !important;
+    }
+    .service-box h4 {
+        margin-bottom: 0;
+        font-size: 18px;
     }
 }
 @media (max-width: 767px) {
@@ -1531,7 +1533,7 @@ nav.notFixed {
     .team_main h1 {
         font-size: 35px;
     }
-    .success_main h1 {
+    .latest-news h1 {
         font-size: 35px;
     }
     .about_main h1 {
@@ -1549,17 +1551,17 @@ nav.notFixed {
         margin-top: 20px;
         margin-bottom: 30px;
     }
-    .footer_logo img {
+    .footer-logo img {
         width: 170px;
     }    
-    .footer_logo p {
+    .footer-logo p {
         font-size: 13px;
     }    
-    .footer_left img {
+    .footer-col img {
         width: 15px;
         height: 16px;
     }    
-    .footer_left {
+    .footer-col {
         gap: 8px;
     }    
     .footer_div h5 {

@@ -4,16 +4,7 @@ AOS.init({
   once: true, // Whether animation should happen only once
   mirror: false, // Whether elements should animate out while scrolling past them
 });
-// Scroll to Top Button
-window.addEventListener("scroll", function () {
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  scrollToTopBtn.style.display = window.pageYOffset > 100 ? "block" : "none";
-});
-document
-  .getElementById("scrollToTopBtn")
-  .addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+
 // Initialize Slick Sliders
 $(document).ready(function () {
   // Client Slider
@@ -39,7 +30,9 @@ $(document).ready(function () {
   $(".testimonials-slider").slick({
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -51,7 +44,7 @@ $(document).ready(function () {
     ],
   });
   // Latest Slick Slider
-  $(".latest_slick").slick({
+  $(".news-slider").slick({
     dots: false,
     infinite: true,
     draggable: true,
@@ -141,4 +134,15 @@ $(".success_box").click(function () {
     $(".demo-iframe").hide();
     $("#" + clickedDataId + "_iframe").show();
   });
+});
+// hide scroll to top btn on first 
+$(document).ready(function () {
+  const $arrowTop = $("#arrowTop");
+  const $home = $("#home");
+
+  $(window).on("scroll", function () {
+    const homeInView = $home.offset().top <= $(window).scrollTop() + $(window).height() && 
+                       $home.offset().top + $home.outerHeight() > $(window).scrollTop();
+    $arrowTop.toggle(!homeInView);
+  }).trigger("scroll"); // Trigger scroll to set the initial state
 });
