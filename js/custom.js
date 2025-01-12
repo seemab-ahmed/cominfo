@@ -1,10 +1,3 @@
-AOS.init({
-  duration: 1000, // Animation duration in milliseconds
-  easing: "ease-in-out", // Animation easing
-  once: true, // Whether animation should happen only once
-  mirror: false, // Whether elements should animate out while scrolling past them
-});
-
 // Initialize Slick Sliders
 $(document).ready(function () {
   // Client Slider
