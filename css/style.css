@@ -1018,26 +1018,29 @@ nav.notFixed {
     margin-bottom: 40px;
     text-align: center;
 }
-
-.success_box {
+.story-card {
     position: relative;
-    margin: 20px 10px;
     border-radius: 12px;
     cursor: pointer;
+    overflow: hidden;
     border: 1px solid lightgray;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease-in-out;
+    /* transform: scale(0.8); */
 }
-
-.no_margin .success_box{
+.no_margin .story-card {
     margin: 20px 0 !important;
 }
-
-.success_box:hover{
-    transform: scale(1.05);
+.success_slick .slick-slide {
+    padding: 10px;
+}
+/* .success_slick .slick-slide.slick-active.slick-current .story-card {
+    transform: scale(1);
+} */
+.story-card:hover{
+    /* transform: scale(1.05); */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-.success_box::before {
+.story-card::before {
     content: '';
     background-color: #1818184d;
     position: absolute;
@@ -1045,54 +1048,45 @@ nav.notFixed {
     height: 100%;
     border-radius: 10px;
 }
-
-.success_box .img_box {
+.story-card .story-thumb {
     width: 100%;
-    padding: 0;
-    border-radius: 10px
-}
+    height: 100%;
+    object-fit: cover;
+    min-height: 160px;
 
-.success_box .vid_player {
+}
+.story-card .vid_player {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50px;
 }
-
 .modal-content {
     background-color: transparent !important;
     border: none !important;
 }
-
 .modal-header {
     border-bottom: none !important;
 }
-
 .modal-body {
     padding: 0 !important;
 }
-
 .modal video {
     width: 100%;
 }
-
-
 .modal .close_btn {
     background: transparent;
-    border: 1px solid #fff;
-    border-radius: 100px;
+    border: 1px solid transparent;
     font-size: 28px;
     width: 25px;
     height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #fff;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
-
-/* .success_box::before {
+/* .story-card::before {
     content: '';
     width: 50px;
     height: 50px;
@@ -1122,7 +1116,6 @@ nav.notFixed {
     font-size: 13px;
     margin-top: 15px;
 }
-
 .latest-news a {
     background-color: #ee5b25;
     color: #fff;
@@ -1151,7 +1144,6 @@ nav.notFixed {
     height: 40px !important;
     cursor: pointer;
 }
-
 .custom_slick_prev_success.slick-prev:hover {
     background: url('../images/icons/arrow_left.png') !important;
     background-repeat: no-repeat !important;
@@ -1159,12 +1151,10 @@ nav.notFixed {
     width: 40px !important;
     height: 40px !important;
 }
-
 .slick-next:before,
 .slick-prev:before {
     content: " " !important;
 }
-
 .custom_slick_next_success {
     background: url('../images/icons/arrow_right.png') !important;
     background-repeat: no-repeat !important;
@@ -1185,7 +1175,17 @@ nav.notFixed {
 .success_slick {
     margin-bottom: 75px !important;
 }
-
+.success_slick .slick-prev {
+    left: auto !important;
+    top: auto !important;
+    right: 60px;
+    bottom: -60px;
+}
+.success_slick .slick-next {
+    top: auto;
+    right: 10px;
+    bottom: -60px;
+}
 .latest-news .slick-prev {
     left: 25px;
     top: 115%;
@@ -1493,7 +1493,7 @@ nav.notFixed {
     .news-card {
         min-height: 270px !important;
     }
-    .success_box {
+    .story-card {
         min-height: 100% !important;
     }
     .service-box h4 {
@@ -1501,6 +1501,7 @@ nav.notFixed {
         font-size: 18px;
     }
 }
+
 @media (max-width: 767px) {
     .hero-section {
         padding: 100px 0 40px;
@@ -1518,7 +1519,7 @@ nav.notFixed {
     }
     .technology-section,
     #success {
-        padding-top: 40px;
+        padding: 40px 0 60px;
     }
     #about {
         padding: 20px 0 40px;

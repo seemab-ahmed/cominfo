@@ -85,15 +85,16 @@ $(".success_slick").slick({
   autoplay: true,
   autoplaySpeed: 2000,
   pauseOnHover: true,
-  slidesToShow: 4,
+  slidesToShow: 2,
   slidesToScroll: 1,
   prevArrow: '<div class="slick-prev custom_slick_prev_success"></div>',
   nextArrow: '<div class="slick-next custom_slick_next_success"></div>',
   responsive: [
-    { breakpoint: 768, settings: { arrows: false, slidesToShow: 2 } },
+    { breakpoint: 992, settings: { slidesToShow: 1 } },
+    { breakpoint: 768, settings: { slidesToShow: 2 } },
     {
       breakpoint: 480,
-      settings: { arrows: false, slidesToShow: 1, dots: true },
+      settings: { slidesToShow: 1},
     },
   ],
 });
@@ -113,7 +114,7 @@ $("#close_btn").click(function () {
 });
 
 // Dynamically load the video source and show modal
-$(".success_box").click(function () {
+$(".story-card").click(function () {
   var videoPath = $(this).data("video");
   $("#videoPlayer").attr("src", videoPath); // Set video source
   $("#videoModal").modal("show"); // Show modal
