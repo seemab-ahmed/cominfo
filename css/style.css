@@ -516,9 +516,8 @@ a {
 }
 
 #success {
-    padding-top: 80px;
+    padding: 60px  40px;
 }
-
 #about {
     padding: 80px 0;
 }
@@ -1351,14 +1350,19 @@ nav.notFixed {
 .technology-section img {
     width: 115px;
     display: block;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
+    margin: 0 auto;
 }
-.technology-section img:hover {
-    filter: grayscale(0%);
+.fabric-logo {
+    width: 140px !important;
+}
+.azure-logo {
+    width:90px !important;
 }
 .aws-logo {
-    width: 90px !important;
+    width:70px !important;
+}
+.ui-logo {
+    width: 100px !important;
 }
 .technology-section .col-md-2 {
     text-align: center;
