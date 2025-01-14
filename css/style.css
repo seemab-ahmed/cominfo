@@ -1351,15 +1351,16 @@ nav.notFixed {
     width: 115px;
     display: block;
     margin: 0 auto;
+    filter: grayscale(100%);
 }
 .fabric-logo {
     width: 140px !important;
 }
 .azure-logo {
-    width:90px !important;
+    width:70px !important;
 }
 .aws-logo {
-    width:70px !important;
+    width:60px !important;
 }
 .ui-logo {
     width: 100px !important;
