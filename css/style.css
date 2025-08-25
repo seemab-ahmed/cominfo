@@ -292,7 +292,10 @@ a {
     box-shadow: 0 4px 8px #100f0f9b;
     transition: transform 0.3s;
     overflow: hidden;
-    /* display: block !important; */
+    min-height: 350px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .testimonial-card::before {
     content: "";
@@ -315,14 +318,14 @@ a {
 .testimonial-review {
     font-size: 1rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.6;
     font-style: italic;
 }
 .testi-detail {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 .testimonial-image {
     width: 80px;
@@ -1357,10 +1360,10 @@ nav.notFixed {
     width: 140px !important;
 }
 .azure-logo {
-    width:70px !important;
+    width:90px !important;
 }
 .aws-logo {
-    width:60px !important;
+    width:70px !important;
 }
 .ui-logo {
     width: 100px !important;
@@ -1452,6 +1455,11 @@ nav.notFixed {
     width: 40px !important;
     height: 40px !important;
 }
+@media screen and (max-width: 1440) {
+    .testimonial-card {
+        min-height: 376px;
+    }
+}
 @media screen and (max-width: 1280px) {
     .hero-section h1 {
         font-size: 24px;
@@ -1461,6 +1469,9 @@ nav.notFixed {
     }
     .hero-para {
         font-size: 18px;
+    }
+    .testimonial-card {
+        min-height: 401px;
     }
 }
 @media screen and (max-width: 992px) {
@@ -1504,6 +1515,9 @@ nav.notFixed {
     .service-box h4 {
         margin-bottom: 0;
         font-size: 18px;
+    }
+    .testimonial-card {
+        min-height: 380px;
     }
 }
 
@@ -1667,5 +1681,13 @@ nav.notFixed {
     }
     .modal{
         top: 25% !important;
+    }
+    .testimonial-card {
+        min-height: 350px;
+    }
+}    
+@media screen and (max-width:480px) {
+    .testimonial-card {
+        min-height: 401px;
     }
 }    
