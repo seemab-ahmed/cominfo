@@ -204,10 +204,10 @@ a {
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
 }
-.service-box:hover {
+/* .service-box:hover {
     transform: translateY(-10px);
     box-shadow: rgba(0, 0, 0, 0.36) 0px 3px 6px, rgba(0, 0, 0, 0.43) 0px 3px 6px;
-}
+} */
 .service-box::before {
     content: '';
     position: absolute;
@@ -330,8 +330,8 @@ a {
 .testimonial-image {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 10%;
+    object-fit: contain;
     margin-right: 15px;
     border: 1px solid #e4e4e5;
 }
@@ -814,10 +814,10 @@ nav.notFixed {
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
 }
-.news-card:hover {
+/* .news-card:hover {
     transform: translateY(-10px);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.4) 0px 2px 6px 2px;
-}
+} */
 .news-card img {
     position: absolute;
     bottom: 15px;
@@ -1325,11 +1325,10 @@ nav.notFixed {
     height: 100%;
     transition: all 0.5s ease-in-out;
 }
-.team-card:hover {
+/* .team-card:hover {
     transform: translateY(-10px);
     box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px, rgba(60, 64, 67, 0.4) 0px 2px 6px 2px;
-
-}
+} */
 
 .team-card::before {
     content: '';
