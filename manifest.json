@@ -1,0 +1,16 @@
+{
+  "name": "Cominfo, Inc.",
+  "short_name": "Cominfo",
+  "description": "Analytics, Automation, Modernization - Microsoft partner and GSA Schedule Holder",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ee5b25",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/logos/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

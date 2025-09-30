@@ -8,19 +8,50 @@
     content="Cominfo, a minority woman-owned enterprise and GSA IT Schedule 70 holder, modernizes data infrastructures and creates unified platforms. Trusted by Fortune 100 and Federal Government. Microsoft and Dell certified partner.">
   <title>Cominfo, Inc.</title>
 
-  <!-- Link Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/code.jquery.com_jquery-3.7.1.min.js" as="script">
+  <link rel="preload" href="images/logos/logo.png" as="image">
+  <link rel="preload" href="video/web_banner.mp4" as="video">
+  <link rel="preload" href="video/banner_poster_img.webp" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"></noscript>
 
-  <!-- Slick Carousel (used for carousels or sliders) -->
-  <link rel="stylesheet" href="css/slick.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ee5b25">
+
+  <!-- DNS Prefetch for external resources -->
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//calendly.com">
+
+  <!-- Bootstrap (latest stable version) - Critical CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <!-- Link Main Stylesheet (Your custom CSS) -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Bootstrap (latest stable version) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+  <link rel="preload" href="css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/slick.css"></noscript>
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"></noscript>
+
+  <!-- Critical CSS for above-the-fold content -->
+  <style>
+    /* Critical styles for immediate load */
+    .hero-section { min-height: 70vh; }
+    .video-wrapper { position: relative; }
+    .video-wrapper video { width: 100%; height: auto; border-radius: 10px; }
+    .client-section { padding: 40px 0; }
+    .client-slide img { max-width: 120px; height: 60px; object-fit: contain; }
+  </style>
 </head>
 
 <body>
@@ -29,7 +60,7 @@
       <div class="container">
         <!-- Logo with alt text optimized for SEO -->
         <a class="navbar-brand" href="index.html">
-          <img src="images/logos/logo.png" alt="Brand Logo - Your Company Name" />
+          <img src="images/logos/logo.png" alt="Brand Logo - Your Company Name" width="150" height="50" loading="eager" />
         </a>
         <!-- Toggle button for mobile view -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -92,7 +123,8 @@
         <div class="col-md-5 mt-5 mt-md-0">
           <div class="video-wrapper">
             <video id="background-video" autoplay loop muted poster="video/banner_poster_img.webp"
-              aria-label="A promotional video about Cominfo's data modernization services.">
+              aria-label="A promotional video about Cominfo's data modernization services." 
+              preload="metadata" playsinline style="background-color: #f8f9fa;">
               <source src="video/web_banner.mp4" type="video/mp4" />
               Your browser does not support the video tag. Please <a href="video/web_banner.mp4" download>download the
                 video</a>.
@@ -107,58 +139,58 @@
     <div class="container">
       <div class="client-slider">
         <div class=" client-slide">
-          <img src="images/logos/client_logo1.png" alt="Client 1" loading="lazy">
+          <img src="images/logos/client_logo1.png" alt="Client 1" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo2.png" alt="Client 2" loading="lazy">
+          <img src="images/logos/client_logo2.png" alt="Client 2" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo3.png" alt="Client 3" loading="lazy">
+          <img src="images/logos/client_logo3.png" alt="Client 3" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo4.png" alt="Client 4" loading="lazy">
+          <img src="images/logos/client_logo4.png" alt="Client 4" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo5.png" alt="Client 5" loading="lazy">
+          <img src="images/logos/client_logo5.png" alt="Client 5" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo6.png" alt="Client 6" loading="lazy">
+          <img src="images/logos/client_logo6.png" alt="Client 6" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo7.png" alt="Client 7" loading="lazy">
+          <img src="images/logos/client_logo7.png" alt="Client 7" loading="eager" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo8.png" alt="Client 8" loading="lazy">
+          <img src="images/logos/client_logo8.png" alt="Client 8" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo9.png" alt="Client 9" loading="lazy">
+          <img src="images/logos/client_logo9.png" alt="Client 9" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo10.png" alt="Client 10" loading="lazy">
+          <img src="images/logos/client_logo10.png" alt="Client 10" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo11.jpeg" alt="Client 11" loading="lazy">
+          <img src="images/logos/client_logo11.jpeg" alt="Client 11" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo12.png" alt="Client 12" loading="lazy">
+          <img src="images/logos/client_logo12.png" alt="Client 12" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo13.jpg" alt="Client 13" loading="lazy">
+          <img src="images/logos/client_logo13.jpg" alt="Client 13" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo14.png" alt="Client 14" loading="lazy">
+          <img src="images/logos/client_logo14.png" alt="Client 14" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_puritan.jpg" alt="Client 15" loading="lazy">
+          <img src="images/logos/client_puritan.jpg" alt="Client 15" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo16.png" alt="Client 16" loading="lazy">
+          <img src="images/logos/client_logo16.png" alt="Client 16" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo17.jpeg" alt="Client 17" loading="lazy">
+          <img src="images/logos/client_logo17.jpeg" alt="Client 17" loading="lazy" width="120" height="60">
         </div>
         <div class=" client-slide">
-          <img src="images/logos/client_logo18.png" alt="Client 18" loading="lazy">
+          <img src="images/logos/client_logo18.png" alt="Client 18" loading="lazy" width="120" height="60">
         </div>
       </div>
     </div>
@@ -172,7 +204,7 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-header d-flex align-items-center mb-2">
-              <img src="images/icons/service1_icon.png" alt="Analytics Icon" loading="lazy" width="50" height="45" />
+              <img src="images/icons/service1_icon.png" alt="Analytics Icon" loading="lazy" width="50" height="45" decoding="async" />
               <h4 class="service-title">Analytics</h4>
             </div>
             <span class="service-subtitle">Microsoft Power Platform</span>
@@ -187,7 +219,7 @@
         <div class="col-md-4 py-4 py-md-0">
           <div class="service-box">
             <div class="service-header d-flex align-items-center mb-2">
-              <img src="images/icons/service2_icon.png" alt="Automation Icon" loading="lazy" width="50" height="45" />
+              <img src="images/icons/service2_icon.png" alt="Automation Icon" loading="lazy" width="50" height="45" decoding="async" />
               <h4 class="service-title">Automation</h4>
             </div>
             <span class="service-subtitle">Robotic Process Automation</span>
@@ -203,7 +235,7 @@
           <div class="service-box">
             <div class="service-header d-flex align-items-center mb-2">
               <img src="images/icons/service3_icon.png" alt="Modernization Icon" loading="lazy" width="50"
-                height="45" />
+                height="45" decoding="async" />
               <h4 class="service-title">Modernization</h4>
             </div>
             <span class="service-subtitle">Azure Cloud Platform</span>
@@ -243,7 +275,7 @@
             <!-- Development Service -->
             <div class="col-md-2 col-3 fabric-icon-wrapper">
               <img src="images/icons/fabric_icon1.png" alt="Development Service Icon" class="service-icon lazyload"
-                loading="lazy" width="40" height="40" />
+                loading="lazy" width="40" height="40" decoding="async" />
             </div>
             <div class="col-md-10 col-9">
               <h4 class="service-title">Development Service</h4>
@@ -256,7 +288,7 @@
             <!-- Data Integration -->
             <div class="col-md-2 col-3 fabric-icon-wrapper">
               <img src="images/icons/fabric_icon3.png" alt="Data Integration Icon" class="service-icon lazyload"
-                loading="lazy" width="40" height="40" />
+                loading="lazy" width="40" height="40" decoding="async" />
             </div>
             <div class="col-md-10 col-9">
               <h4 class="service-title">Data Integration</h4>
@@ -268,7 +300,7 @@
             <!-- Support Service -->
             <div class="col-md-2 col-3 fabric-icon-wrapper">
               <img src="images/icons/fabric_icon4.png" alt="Support Service Icon" class="service-icon lazyload"
-                loading="lazy" width="40" height="40" />
+                loading="lazy" width="40" height="40" decoding="async" />
             </div>
             <div class="col-md-10 col-9">
               <h4 class="service-title">Support Service</h4>
@@ -348,25 +380,25 @@
         <div class="col-md-6">
           <div class="demo-slider">
             <div class="demo-slide">
-              <img src="images/demo/demo1.png" alt="demo img" class="showBorder" data-id="demo1" />
+              <img src="images/demo/demo1.png" alt="demo img" class="showBorder" data-id="demo1" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo2.png" alt="demo img" class="showBorder" data-id="demo2" />
+              <img src="images/demo/demo2.png" alt="demo img" class="showBorder" data-id="demo2" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo3.png" alt="demo img" class="showBorder" data-id="demo3" />
+              <img src="images/demo/demo3.png" alt="demo img" class="showBorder" data-id="demo3" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo4.png" alt="demo img" class="showBorder" data-id="demo4" />
+              <img src="images/demo/demo4.png" alt="demo img" class="showBorder" data-id="demo4" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo5.png" alt="demo img" class="showBorder" data-id="demo5" />
+              <img src="images/demo/demo5.png" alt="demo img" class="showBorder" data-id="demo5" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo6.png" alt="demo img" class="showBorder" data-id="demo6" />
+              <img src="images/demo/demo6.png" alt="demo img" class="showBorder" data-id="demo6" loading="lazy" width="500" height="300" />
             </div>
             <div class="demo-slide">
-              <img src="images/demo/demo7.png" alt="demo img" class="showBorder" data-id="demo7" />
+              <img src="images/demo/demo7.png" alt="demo img" class="showBorder" data-id="demo7" loading="lazy" width="500" height="300" />
             </div>
           </div>
           <div class="demo-content-wrapper">
@@ -460,18 +492,18 @@
       <div class="col-md-7  slider-for">
         <!-- Each slide will be one video-wrapper -->
         <div class="video-wrapper">
-          <video class="col-12" controls autoplay >
+          <video class="col-12" controls preload="none" poster="SucessStories/thumbnails/Thumbnail1.webp">
             <source src="SucessStories/videos/video1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-           <img src="images/icons/video_player.png" alt="play button" class="vid_player" />
+           <img src="images/icons/video_player.png" alt="play button" class="vid_player" loading="lazy" width="48" height="48" />
         </div>
         <div class="video-wrapper">
-          <video class="col-12" controls autoplay >
+          <video class="col-12" controls preload="none" poster="SucessStories/thumbnails/Thumbnail2.webp">
             <source src="SucessStories/videos/video2.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-           <img src="images/icons/video_player.png" alt="play button" class="vid_player" />
+           <img src="images/icons/video_player.png" alt="play button" class="vid_player" loading="lazy" width="48" height="48" />
         </div>
         <div class="video-wrapper">
           <video class="col-12" controls autoplay >
@@ -535,34 +567,34 @@
       <div class="col-md-10 m-auto">
         <div class="success_slick_copy slider-nav">
           <div class="story_card" data-video="SucessStories/videos/video1.mp4">
-            <img src="./images/slider/image2.jpeg" alt="thumb" />
+            <img src="./images/slider/image2.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video2.mp4">
-            <img src="./images/slider/image8.jpeg" alt="thumb" />
+            <img src="./images/slider/image8.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video3.mp4">
-            <img src="./images/slider/image10.jpeg" alt="thumb" />
+            <img src="./images/slider/image10.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video4.mp4">
-            <img src="./images/slider/image1.jpeg" alt="thumb" />
+            <img src="./images/slider/image1.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video5.mp4">
-            <img src="./images/slider/image4.jpeg" alt="thumb" />
+            <img src="./images/slider/image4.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video6.mp4">
-            <img src="./images/slider/image3.jpeg" alt="thumb" />
+            <img src="./images/slider/image3.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video7.mp4">
-            <img src="./images/slider/image2.jpeg" alt="thumb" />
+            <img src="./images/slider/image2.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video8.mp4">
-            <img src="./images/slider/image5.jpeg" alt="thumb" />
+            <img src="./images/slider/image5.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video9.mp4">
-            <img src="./images/slider/image6.jpeg" alt="thumb" />
+            <img src="./images/slider/image6.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
           <div class="story_card" data-video="SucessStories/videos/video10.mp4">
-            <img src="./images/slider/image11.jpeg" alt="thumb" />
+            <img src="./images/slider/image11.jpeg" alt="thumb" loading="lazy" width="200" height="150" />
           </div>
         </div>
       </div>
@@ -1078,13 +1110,85 @@
     <img src="images/icons/arrow_up.png" alt="arrow" loading="lazy" />
   </a>
   <!-- ======== scripts ======== -->
+  <!-- Load critical scripts first -->
+  <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+  
+  <!-- Load non-critical scripts asynchronously -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-  <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script src="js/custom.js"></script>
+    crossorigin="anonymous" defer></script>
+  
+  <script>
+    // Register Service Worker for caching
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          }, function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+
+    // Performance optimizations
+    // Preload video on user interaction
+    let videoPreloaded = false;
+    
+    // Intersection Observer for lazy loading optimization
+    if ('IntersectionObserver' in window) {
+      const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const lazyImage = entry.target;
+            if (lazyImage.dataset.src) {
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.removeAttribute('data-src');
+            }
+            // Fade in effect for better UX
+            lazyImage.style.transition = 'opacity 0.3s';
+            lazyImage.style.opacity = '1';
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px' // Start loading 50px before element is visible
+      });
+
+      // Observe all lazy images
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        lazyImageObserver.observe(img);
+      });
+    }
+
+    // Load slick and custom JS after DOM is ready
+    $(document).ready(function() {
+      // Load slick carousel script
+      $.getScript("js/slick.min.js", function() {
+        // Load custom JS after slick is loaded
+        $.getScript("js/custom.js");
+      });
+      
+      // Optimize video loading
+      const video = document.getElementById('background-video');
+      if (video && !videoPreloaded) {
+        // Preload video on first user interaction
+        const preloadVideo = () => {
+          if (!videoPreloaded) {
+            video.preload = 'auto';
+            videoPreloaded = true;
+            document.removeEventListener('click', preloadVideo);
+            document.removeEventListener('scroll', preloadVideo);
+            document.removeEventListener('touchstart', preloadVideo);
+          }
+        };
+        
+        document.addEventListener('click', preloadVideo, { once: true });
+        document.addEventListener('scroll', preloadVideo, { once: true });
+        document.addEventListener('touchstart', preloadVideo, { once: true });
+      }
+    });
+  </script>
 </body>
 
 </html>
