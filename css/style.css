@@ -1479,6 +1479,135 @@ nav.notFixed {
     width: 40px !important;
     height: 40px !important;
 }
+
+
+/* Our AI Expertise section css start here */
+.ai-expertise{
+    padding: 80px 0;
+}
+.section-badge {
+      background-color: #f0f0f0;
+      color: #212529;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: inline-block;
+      font-weight: 500;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .section-heading {
+      font-size: clamp(28px, 4vw, 32px);
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: #212529;
+      width: fit-content;
+    }
+
+    .section-subtext {
+      color: #212529;
+      max-width: 767px;
+      margin: 10px auto 64px;
+      font-size:clamp(16px, 4vw, 20px) ;
+    }
+
+    .ai-expertise  .expertise-card {
+    background-color: #fbfbfb;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+    padding: 32px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+   .ai-expertise   .expertise-card:hover {
+      background-color: #fff;
+    }
+
+   .ai-expertise   .expertise-icon {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+   .ai-expertise   .nav{
+        margin-bottom: 48px !important;
+    }
+    .ai-expertise .tab-pane .card-row{
+       display: flex;
+       gap: 24px;
+
+    }
+    .ai-expertise .tab-pane .card-row .main-card{
+        width: 33%;
+    }
+  .ai-expertise    .nav-pills .nav_link,
+   .ai-expertise   .cta-btn {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffff;
+    padding: 16px 24px;
+    border: 1px solid #ee5b25;
+    text-transform: capitalize;
+    background: #ee5b25;
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px;
+    transition: all ease-in-out 0.6s;
+    transition: all 0.3s ease-in-out;
+    }
+   .ai-expertise   .nav-pills .nav_link.active,
+   .ai-expertise   .nav-pills .nav_link:hover,
+   .ai-expertise   .cta-btn:hover {
+      background: linear-gradient(to left, #f05b29 50%, transparent 50%);
+    background-size: 200% 100%;
+    color: #f05b29 !important;
+    background-position: left bottom;
+    animation: gradientAnimation .5s;
+    border: 1px solid #f05b29;
+    }
+    .ai-expertise .expertise-card {
+    transition: 0.5s all ease-in-out;cursor: pointer;
+    }
+  .ai-expertise  .expertise-card .expertise-icon{
+        background-color: #f05b29;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        padding: 16px;width: fit-content;
+    }
+   .ai-expertise .expertise-card h5{
+     font-size: 23px;
+     color:#212529;
+     margin-bottom: 16px;
+     font-weight: 500;
+
+    }
+  .ai-expertise  .expertise-card p{
+      font-size: 16px;
+     color:#212529;
+     font-weight: 400;
+     margin: 0;
+    }
+   .ai-expertise .cta-btn {
+        margin:64px auto 0;
+    }
+  .ai-expertise  .line-bar{
+        width: 0;
+        height: 4px;
+        background-color:#f05b29 ;
+        border-radius: 12px;
+        transition: 0.5s all ease-in-out;
+        margin-top: 24px;
+    }
+  .ai-expertise  .expertise-card:hover{
+        transform: scale(1.04);
+    }
+   .ai-expertise .expertise-card:hover  .line-bar{
+    width: 100%;
+    }
+/* Our AI Expertise section css end here */
 @media screen and (max-width: 1440) {
     .testimonial-card {
         min-height: 376px;
@@ -1499,6 +1628,15 @@ nav.notFixed {
     }
 }
 @media screen and (max-width: 992px) {
+   .ai-expertise .tab-pane .card-row{
+       flex-wrap: wrap;
+       gap: 15px;
+       
+    }
+    .ai-expertise .tab-pane .card-row .main-card{
+        width: 48%;
+    }
+
     .hero-section h1 {
         font-size: 18px;
     }
@@ -1558,6 +1696,13 @@ nav.notFixed {
 }
 
 @media (max-width: 767px) {
+    .ai-expertise{
+        padding: 40px 0;
+    }
+ .ai-expertise .tab-pane .card-row .main-card{
+        width: 100%;
+    }
+
     .hero-section {
         padding: 100px 0 40px;
     }

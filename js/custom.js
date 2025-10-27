@@ -1,3 +1,19 @@
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener('mouseenter', () => {
+      const target = document.querySelector(tab.getAttribute('data-bs-target'));
+      const allTabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+      const allContent = document.querySelectorAll('.tab-pane');
+
+      // sab tabs se active class hatao
+      allTabs.forEach(t => t.classList.remove('active'));
+      allContent.forEach(c => c.classList.remove('active', 'show'));
+
+      // hovered tab aur uska content active karo
+      tab.classList.add('active');
+      target.classList.add('active', 'show');
+    });
+  });
+
 // Initialize Slick Sliders
 $(document).ready(function () {
   // Client Slider
