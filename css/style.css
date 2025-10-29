@@ -1547,11 +1547,11 @@ nav.notFixed {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    color: #ffff;
+    color: #ee5b25;
     padding: 16px 24px;
-    border: 1px solid #ee5b25;
+    border: 2px solid #7F7F7F;
     text-transform: capitalize;
-    background: #ee5b25;
+    background: #ffff;
     display: inline-block;
     text-align: center;
     border-radius: 12px;
@@ -1561,21 +1561,23 @@ nav.notFixed {
    .ai-expertise   .nav-pills .nav_link.active,
    .ai-expertise   .nav-pills .nav_link:hover,
    .ai-expertise   .cta-btn:hover {
-      background: linear-gradient(to left, #f05b29 50%, transparent 50%);
+      /* background: linear-gradient(to left, transparent 50%, #f05b29 50%); */
     background-size: 200% 100%;
-    color: #f05b29 !important;
+    color: #7F7F7F !important;
     background-position: left bottom;
     animation: gradientAnimation .5s;
-    border: 1px solid #f05b29;
+    border: 2px solid #7F7F7F;
     }
     .ai-expertise .expertise-card {
     transition: 0.5s all ease-in-out;cursor: pointer;
     }
   .ai-expertise  .expertise-card .expertise-icon{
-        background-color: #f05b29;
-        border-radius: 12px;
-        margin-bottom: 24px;
-        padding: 16px;width: fit-content;
+        /* background-color: #f05b29; */
+        margin-bottom: 14px;
+        border-top: 7px solid #ee5b25;
+        border-left: 7px solid #ee5b25;
+        padding: 0px;
+        width: fit-content;
     }
    .ai-expertise .expertise-card h5{
      font-size: 23px;
