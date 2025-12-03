@@ -1,3 +1,23 @@
+
+  $(".hero-slider").slick({
+    dots: false,
+    infinite: true,
+    draggable: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<div class="slick-prev custom_slick_prev_hero"></div>',
+    nextArrow: '<div class="slick-next custom_slick_next_hero"></div>',
+    responsive: [
+      { breakpoint: 768, settings: { arrows: false, slidesToShow: 1 } },
+      {
+        breakpoint: 480,
+        settings: { arrows: false, slidesToShow: 1 },
+      },
+    ],
+  });
+
+
 document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
     tab.addEventListener('mouseenter', () => {
       const target = document.querySelector(tab.getAttribute('data-bs-target'));

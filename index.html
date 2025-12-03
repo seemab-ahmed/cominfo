@@ -64,7 +64,7 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#team">Team</a>
+              <a class="nav-link" href="/blog.html">Blog</a>
             </li>
           </ul>
           <!-- Demo button -->
@@ -102,15 +102,42 @@
         </div>
 
         <!-- Video Section -->
-        <div class="col-md-5 mt-5 mt-md-0">
-          <div class="video-wrapper">
-            <video id="background-video" autoplay loop muted poster="video/banner_poster_img.webp"
-              aria-label="A promotional video about Cominfo's data modernization services.">
-              <source src="video/web_banner.mp4" type="video/mp4" />
-              Your browser does not support the video tag. Please <a href="video/web_banner.mp4" download>download the
-                video</a>.
+        <div class="col-md-5 mt-5 mt-md-0 ">
+         <div class="hero-slider">
+            <div class="video-wrapper">
+            <video 
+              id="background-video"
+              autoplay
+              loop
+              muted
+              playsinline
+              webkit-playsinline
+              poster="video/banner_poster_img.webp"
+            >
+              <source src="video/web_banner.mp4" type="video/mp4">
             </video>
+             <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const vid = document.getElementById("background-video");
+                  vid.muted = true;
+                  vid.play().catch(() => {
+                    vid.muted = true;
+                    vid.play();
+                  });
+                });
+              </script>
           </div>
+
+          <div class="hero-slide">
+            <img src="./images/slider/image1.jpeg" alt="">
+          </div>
+         <!--  <div class="hero-slide">
+            <img src="./images/slider/image2.jpeg" alt="">
+          </div>
+          <div class="hero-slide">
+            <img src="./images/slider/image3.jpeg" alt="">
+          </div> -->
+         </div>
         </div>
       </div>
     </div>
@@ -1190,7 +1217,7 @@
               <li><a href="#client">Clients</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#success">Success Stories</a></li>
-              <li><a href="#team">Team</a></li>
+              <li><a href="/blog.html">Blog</a></li>
               <li><a href="#about">About</a></li>
             </ul>
           </div>
@@ -1263,6 +1290,7 @@
     <img src="images/icons/arrow_up.png" alt="arrow" loading="lazy" />
   </a>
   <!-- ======== scripts ======== -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
