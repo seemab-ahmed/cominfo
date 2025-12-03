@@ -1549,7 +1549,7 @@ nav.notFixed {
     font-size: 16px;
     color: #ee5b25;
     padding: 16px 24px;
-    border: 1px solid #7F7F7F;
+    border: 2px solid #7F7F7F;
     text-transform: capitalize;
     background: #ffff;
     display: inline-block;
@@ -1566,7 +1566,7 @@ nav.notFixed {
     color: #7F7F7F !important;
     background-position: left bottom;
     animation: gradientAnimation .5s;
-    border: 1px solid #7F7F7F;
+    border: 2px solid #7F7F7F;
     }
     .ai-expertise .expertise-card {
     transition: 0.5s all ease-in-out;cursor: pointer;

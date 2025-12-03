@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,6 +21,14 @@
   <!-- Bootstrap (latest stable version) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style type="text/css">
+  .auto-style1 {
+	  font-size: large;
+  }
+  .auto-style2 {
+	  font-weight: normal;
+  }
+  </style>
 </head>
 
 <body>
@@ -45,6 +53,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ai">Artificial intelligence</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#success">Success Stories</a>
             </li>
@@ -79,11 +91,12 @@
         <!-- Text Section -->
         <div class="col-md-6">
           <h1>
-            <span>Analytics</span> <span>Automation</span> Modernization
+            <span class="auto-style2"><strong>Analytics</strong></span> <span>Automation</span> Modernization
           </h1>
-          <span class="hero-top-text">A Microsoft partner and GSA Schedule Holder</span>
+          <span class="hero-top-text">A Microsoft Partner and GSA Schedule Holder</span>
           <p class="hero-para mb-4">
-            Cominfo provides a holistic approach to modernizing data infrastructures and creating unified platforms.
+           <!-- Cominfo provides a holistic approach to modernizing data infrastructures and creating unified platforms. -->
+           Transform data into action with AI-powered intelligence.
           </p>
           <a href="https://calendly.com/cominfo-session/15min" target="_blank" class="border-btn">Let's Connect</a>
         </div>
@@ -177,10 +190,10 @@
             </div>
             <span class="service-subtitle">Microsoft Power Platform</span>
             <p class="service-description">
-              We help businesses of all sizes transform raw data into actionable
-              intelligence by leveraging Machine Learning (ML) and Artificial
-              Intelligence (AI) using the AI-Powered Low-Code Power Platform.
-            </p>
+              Power Platform services designed to streamline operations, integrate data, and build custom low-code 
+              applications. From Power BI to Power Apps and Copilot Studio, these solutions 
+              enhance efficiency and deliver AI-powered insights for smarter decision-making.         
+              </p>
           </div>
         </div>
         <!-- Service Box 2 -->
@@ -192,10 +205,10 @@
             </div>
             <span class="service-subtitle">Robotic Process Automation</span>
             <p class="service-description">
-              In the era of AI and Automation, automating time-consuming tasks
-              is essential. We leverage industry-leading tools such as Power
-              Automate and UiPath to help enterprises achieve automation.
-            </p>
+              In the era of AI and automation, eliminating manual, time-consuming tasks is key to staying competitive. 
+              Using industry-leading platforms like Power Automate and UiPath, we deliver intelligent automation that 
+              enhances efficiency, reduces costs, and accelerates business performance.            
+              </p>
           </div>
         </div>
         <!-- Service Box 3 -->
@@ -208,10 +221,9 @@
             </div>
             <span class="service-subtitle">Azure Cloud Platform</span>
             <p class="service-description">
-              We can assist in modernizing your on-premises infrastructure by
-              helping you adopt the Azure Cloud platform. This transition will
-              enhance scalability, security, and efficiency across your organization.
-            </p>
+              Modernize legacy infrastructure with a seamless transition to the Azure Cloud platform. Gain unmatched scalability, robust security, 
+              and operational efficiency while unlocking the flexibility and innovation needed to power your organization's growth.            
+              </p>
           </div>
         </div>
       </div>
@@ -284,7 +296,7 @@
   </section> -->
   
     <!-- Our AI Expertise section start here -->
- <section class="ai-expertise ">
+ <section class="ai-expertise " id="ai"> 
     <div class="container">
       <!-- Top Badge -->
       <!-- <div class="text-center section-badge mb-3 d-flex gap-2 align-items-center justify-content-center  gap-2 px-4 py-2  mb-6 backdrop-blur-md border  ">
@@ -293,48 +305,102 @@
 
       <!-- Heading -->
       <h2 class="section-heading m-auto d-flex">
-        Our AI Expertise
+        Artificial Intelligence (AI)
       </h2>
 
       <!-- Subtext -->
       <p class="text-center section-subtext mx-auto">
-        Fuel innovation and elevate decision-making with intelligent,
-        high-performance models.
+        <!--Fuel innovation and elevate decision-making with intelligent,
+        high-performance models. -->
+        <span class="auto-style1">Unlock the power of intelligent automation and data-driven decision-making. Our AI solutions help organizations streamline operations
+        and uncover insights hidden within complex data. 
+      </span> 
       </p>
 
       <!-- Tabs Navigation -->
       <ul class="nav nav-pills justify-content-center  gap-3" id="aiTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav_link active d-flex gap-2 align-items-center" id="nlp-tab" data-bs-toggle="pill" data-bs-target="#nlp" type="button" role="tab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
-            Natural Language Processing</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav_link d-flex gap-2 align-items-center" id="cv-tab" data-bs-toggle="pill" data-bs-target="#cv" type="button" role="tab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
-            Ai Recognition</button>
+              <li class="nav-item" role="presentation">
+          <button class="nav_link active d-flex gap-2 align-items-center" id="ds-tab" data-bs-toggle="pill" data-bs-target="#ds" type="button" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-increasing" aria-hidden="true"><path d="M5 21v-6"></path><path d="M12 21V9"></path><path d="M19 21V3"></path></svg>
+            Data Science</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav_link d-flex gap-2 align-items-center" id="gen-tab" data-bs-toggle="pill" data-bs-target="#gen" type="button" role="tab">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
             Generative AI / LLMs</button>
         </li>
+
         <li class="nav-item" role="presentation">
-          <button class="nav_link d-flex gap-2 align-items-center" id="ds-tab" data-bs-toggle="pill" data-bs-target="#ds" type="button" role="tab">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-increasing" aria-hidden="true"><path d="M5 21v-6"></path><path d="M12 21V9"></path><path d="M19 21V3"></path></svg>
-            Data Science</button>
+          <button class="nav_link d-flex gap-2 align-items-center" id="cv-tab" data-bs-toggle="pill" data-bs-target="#cv" type="button" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            AI Recognition</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav_link d-flex gap-2 align-items-center" id="custom-tab" data-bs-toggle="pill" data-bs-target="#custom" type="button" role="tab">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog" aria-hidden="true"><path d="M11 10.27 7 3.34"></path><path d="m11 13.73-4 6.93"></path><path d="M12 22v-2"></path><path d="M12 2v2"></path><path d="M14 12h8"></path><path d="m17 20.66-1-1.73"></path><path d="m17 3.34-1 1.73"></path><path d="M2 12h2"></path><path d="m20.66 17-1.73-1"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m3.34 7 1.73 1"></path><circle cx="12" cy="12" r="2"></circle><circle cx="12" cy="12" r="8"></circle></svg>
             Custom AI Models</button>
         </li>
+                <li class="nav-item" role="presentation">
+          <button class="nav_link d-flex gap-2 align-items-center" id="nlp-tab" data-bs-toggle="pill" data-bs-target="#nlp" type="button" role="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+            Natural Language Processing</button>
+        </li>
+
       </ul>
 
       <!-- Tabs Content -->
       <div class="tab-content" id="aiTabsContent">
+      
+      
+        <!-- Data Science -->
+        <div class="tab-pane fade show active" id="ds" role="tabpanel">
+          <div class="card-row">
+            <div class="col-md-4">
+              <div class="service-box">
+                <div class="service-header d-flex align-items-center mb-2">
+                  <img src="images/icons/data-insights.png" alt="Analytics Icon" loading="lazy" width="70" height="65" />
+                  <h4 class="service-title">Data Insights & Interpretation</h4>
+                </div>
+                <p class="service-description">
+                  <!--Use advanced statistical techniques and algorithms to analyze complex datasets and reveal meaningful patterns. -->
+                 Unlock the power of your data with advanced analytics that reveal hidden trends and insights. Transform raw information into clear, actionable intelligence that drives smarter decisions, 
+                 sharper efficiency, and new growth opportunities. Explore our services in predictive modeling, segmentation, anomaly detection, and correlation analysis.</p>
+              </div>
+            </div>
+            <div class="col-md-4 py-4 py-md-0">
+              <div class="service-box">
+                <div class="service-header d-flex align-items-center mb-2">
+                  <img src="images/icons/predictive-int.jpg" alt="Automation Icon" loading="lazy" width="70" height="65" />
+                  <h4 class="service-title">Predictive Intelligence</h4>
+                </div>
+                <p class="service-description">
+                  <!-- Develop forecasting models to anticipate outcomes and support informed, data-driven decision-making. -->
+                 Anticipate what is next with precision forecasting powered by data and AI. Our models transform historical data into accurate predictions that help you plan smarter, optimize operations, 
+                 and minimize risks. Explore our expertise in sales and demand forecasting, financial projections, and scenario analysis. </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-box">
+                <div class="service-header d-flex align-items-center mb-2">
+                  <img src="images/icons/machine-learning.jpg" alt="Modernization Icon" loading="lazy" width="70"
+                    height="65" />
+                  <h4 class="service-title">Machine Learning Integration</h4>
+                </div>
+                <p class="service-description">
+                  <!-- Deploy algorithms that enable continuous learning, allowing systems to evolve and perform better over time. -->
+                 Empower your business with intelligent systems that evolve with every interaction. Our adaptive algorithms continuously learn and improve, boosting accuracy, efficiency, and performance. 
+                 Discover how recommendation engines, predictive analytics, and intelligent automation can keep your organization ahead of the curve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+      
+      
+      
         <!-- NLP Tab -->
-        <div class="tab-pane fade show active" id="nlp" role="tabpanel">
+        <div class="tab-pane fade " id="nlp" role="tabpanel">
           <div class="card-row">
             <div class="col-md-4">
               <div class="service-box">
@@ -343,7 +409,9 @@
                   <h4 class="service-title">Text Intelligence</h4>
                 </div>
                 <p class="service-description">
-                  Automatically uncover insights, sentiment, and critical information from large volumes of textual data.
+                 <!-- Automatically uncover insights, sentiment, and critical information from large volumes of textual data. -->
+                 Automatically uncover insights, sentiment, and critical information from large volumes of textual data, enabling faster decision-making, 
+                 improved customer understanding, and more precise business strategies.
                 </p>
               </div>
             </div>
@@ -354,7 +422,9 @@
                   <h4 class="service-title">Multilingual Translation</h4>
                 </div>
                 <p class="service-description">
-                  Enable smooth cross-language communication with precise, real-time translation capabilities.
+                 <!-- Enable smooth cross-language communication with precise, real-time translation capabilities. -->
+                 Enable smooth cross-language communication with precise, real-time translation capabilities that help teams collaborate globally, 
+                 enhance customer engagement, and remove language barriers across markets and platforms.
                 </p>
               </div>
             </div>
@@ -365,7 +435,9 @@
                   <h4 class="service-title">Emotion & Sentiments</h4>
                 </div>
                 <p class="service-description">
-                Understand customer opinions and feelings through social media, reviews, and feedback analytics.
+                <!--Understand customer opinions and feelings through social media, reviews, and feedback analytics to identify emerging trends, measure brand perception, and uncover opportunities to enhance customer satisfaction and loyalty. -->
+                Understand customer opinions and feelings through social media, reviews, and feedback analytics to identify emerging trends, 
+                measure brand perception, and uncover opportunities to enhance customer satisfaction and loyalty.
                 </p>
               </div>
             </div>
@@ -382,7 +454,10 @@
                   <h4 class="service-title">Object Recognition</h4>
                 </div>
                 <p class="service-description">
-                  Detect and pinpoint items in images or videos for use cases such as automation, monitoring, and security.
+                 <!-- Detect and pinpoint items in images or videos for use cases such as automation, monitoring, and security. -->
+                  Detect and pinpoint items in images or videos for use cases such as automation, monitoring, and security, enabling smarter visual recognition 
+                  systems that improve operational efficiency, ensure safety, and deliver real-time intelligence across industries.
+
                 </p>
               </div>
             </div>
@@ -393,8 +468,10 @@
                   <h4 class="service-title">Facial Identification</h4>
                 </div>
                 <p class="service-description">
-                  Precisely verify and recognize individuals to improve personalization and secure access.
-                </p>
+                  <!--Precisely verify and recognize individuals to improve personalization and secure access. -->
+                  Precisely verify and recognize individuals to improve personalization and secure access, ensuring seamless user experiences while maintaining 
+                  the highest standards of privacy, compliance, and data protection across digital and physical environments.
+                </p> 
               </div>
             </div>
             <div class="col-md-4">
@@ -405,7 +482,9 @@
                   <h4 class="service-title">Image Categorization</h4>
                 </div>
                 <p class="service-description">
-                  Organize and classify visual data into predefined groups for faster search, analysis, and retrieval.
+                  <!-- Organize and classify visual data into predefined groups for faster search, analysis, and retrieval. -->
+                  Organize and classify visual data into predefined groups for faster search, analysis, and retrieval, enabling efficient content management, enhanced pattern recognition, 
+                  and streamlined workflows that support smarter decision-making and automation.
                 </p>
               </div>
             </div>
@@ -422,7 +501,9 @@
                   <h4 class="service-title">Automated Contents</h4>
                 </div>
                 <p class="service-description">
-                  Create high-quality text, visuals, and media for industries like marketing, education, and entertainment.
+                  <!-- Create high-quality text, visuals, and media for industries like marketing, education, and entertainment. -->
+                  Bring your ideas to life with compelling content and media tailored for your industry. Whether it is marketing campaigns, educational materials, or entertainment projects, we create 
+                  high-quality text, visuals, and multimedia that engage audiences, enhance learning, and leave a lasting impact.
                 </p>
               </div>
             </div>
@@ -433,7 +514,9 @@
                   <h4 class="service-title">Creative Collaboration</h4>
                 </div>
                 <p class="service-description">
-                  Support writers, designers, and artists with idea generation, inspiration, and draft development.
+                 <!-- Support writers, designers, and artists with idea generation, inspiration, and draft development. -->
+                 Support writers, designers, and artists at every stage of their creative journey by providing fresh ideas, sparking inspiration, and assisting in the development of drafts. 
+                 From brainstorming concepts and refining outlines to offering feedback and enhancing the clarity and impact of their work, we help creators transform their initial visions into polished, compelling content.
                 </p>
               </div>
             </div>
@@ -445,53 +528,17 @@
                   <h4 class="service-title">Conversational Intelligence</h4>
                 </div>
                 <p class="service-description">
-                  Develop smart chatbots and virtual assistants capable of natural, context-aware, and human-like interactions.
+                 <!-- Develop smart chatbots and virtual assistants capable of natural, context-aware, and human-like interactions. -->
+                 Develop intelligent chatbots and virtual assistants designed to understand context, interpret user intent, and engage in natural, 
+                 human-like conversations. These AI-powered tools can handle complex queries, provide personalized responses, and assist with tasks 
+                 ranging from customer support to interactive learning. 
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Data Science -->
-        <div class="tab-pane fade" id="ds" role="tabpanel">
-          <div class="card-row">
-            <div class="col-md-4">
-              <div class="service-box">
-                <div class="service-header d-flex align-items-center mb-2">
-                  <img src="images/icons/data-insights.png" alt="Analytics Icon" loading="lazy" width="70" height="65" />
-                  <h4 class="service-title">Data Insights & Interpretation</h4>
-                </div>
-                <p class="service-description">
-                  Use advanced statistical techniques and algorithms to analyze complex datasets and reveal meaningful patterns.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4 py-4 py-md-0">
-              <div class="service-box">
-                <div class="service-header d-flex align-items-center mb-2">
-                  <img src="images/icons/predictive-int.jpg" alt="Automation Icon" loading="lazy" width="70" height="65" />
-                  <h4 class="service-title">Predictive Intelligence</h4>
-                </div>
-                <p class="service-description">
-                  Develop forecasting models to anticipate outcomes and support informed, data-driven decision-making.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="service-box">
-                <div class="service-header d-flex align-items-center mb-2">
-                  <img src="images/icons/machine-learning.jpg" alt="Modernization Icon" loading="lazy" width="70"
-                    height="65" />
-                  <h4 class="service-title">Machine Learning Integration</h4>
-                </div>
-                <p class="service-description">
-                  Deploy algorithms that enable continuous learning, allowing systems to evolve and perform better over time.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      
         <!-- Custom AI Models -->
         <div class="tab-pane fade" id="custom" role="tabpanel">
           <div class="card-row">
@@ -502,8 +549,10 @@
                   <h4 class="service-title">Custom AI Models</h4>
                 </div>
                 <p class="service-description">
-                  Create models engineered to match the unique goals, challenges, and workflows of your organization.
-                </p>
+                  <!-- Create models engineered to match the unique goals, challenges, and workflows of your organization. -->
+                 Transform your data strategy with custom AI models built around your unique goals and workflows. Our tailored solutions deliver actionable insights that drive efficiency, innovation, and growth. 
+                 From optimizing operations to enhancing customer experiences, we design precise, scalable models that align perfectly with your business objectives.               
+                  </p>
               </div>
             </div>
             <div class="col-md-4 py-4 py-md-0">
@@ -513,7 +562,9 @@
                   <h4 class="service-title">Optimization & Precision</h4>
                 </div>
                 <p class="service-description">
-                  Refine models for maximum accuracy, efficiency, and performance tailored to your use case.
+                  <!-- Refine models for maximum accuracy, efficiency, and performance tailored to your use case. -->
+                  Maximize the power of your AI with models refined for peak accuracy, efficiency, and performance. Through continuous optimization and fine-tuning, we ensure every model delivers reliable, 
+                  actionable insights. Empower your organization with AI you can trust for smarter decisions and stronger results.
                 </p>
               </div>
             </div>
@@ -525,8 +576,10 @@
                   <h4 class="service-title">Seamless Integration</h4>
                 </div>
                 <p class="service-description">
-                  Embed custom models into your existing systems and processes for smooth, end-to-end functionality.
-                </p>
+                  <!-- Embed custom models into your existing systems and processes for smooth, end-to-end functionality. -->
+                  Seamlessly integrate AI into your existing systems for effortless, end-to-end performance. Our custom models blend perfectly with your workflows to deliver real-time insights, 
+                  automate decisions, and boost efficiency all without disrupting daily operations. Experience AI that works in harmony with your business.                
+                  </p>
               </div>
             </div>
           </div>
@@ -1007,6 +1060,21 @@
       <h2 class="secondry-heading center">Latest News</h2>
 
       <div class="news-slider">
+      
+      
+              <div class="news-card">
+          <h4 class="news-title">Cominfo acquires ALPHA1</h4>
+          <p>
+            Cominfo has acquired Alpha1, an AI company known for its innovative machine learning and automation solutions. 
+            This acquisition strengthens Cominfo’s position in the AI landscape.
+          </p>
+          <div class="text-end">
+            <img src="images/logos/7.png" alt="Alpha1" class="news-logo" loading="lazy" />
+          </div>
+        </div>
+
+      
+      
         <div class="news-card">
           <h4 class="news-title">U.S. Dept Of The Interior</h4>
           <p>
@@ -1088,13 +1156,6 @@
         <!-- Contact Information -->
         <div class="col-md-4">
           <div class="footer-col">
-            <div><img src="./images/icons/phone_icon.png" alt="Phone Icon" loading="lazy" /></div>
-            <div>
-              <h6>Call Us</h6>
-              <p><a href="tel:18006694748">1 800.669.4748</a></p>
-            </div>
-          </div>
-          <div class="footer-col">
             <div><img src="./images/icons/email_icon.png" alt="Email Icon" loading="lazy" /></div>
             <div>
               <h6>Email</h6>
@@ -1170,7 +1231,7 @@
 
     <!-- Copyright and Social Links -->
     <div class="copy_rights">
-      <p>© Copyright Cominfo. All Rights Reserved.</p>
+      <p>Â© Copyright Cominfo. All Rights Reserved.</p>
       <div class="social_icon">
         <span>
           <a href="https://www.facebook.com/cominfoinc/" target="_blank" aria-label="Visit Cominfo Facebook Page">
