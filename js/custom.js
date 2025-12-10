@@ -9,10 +9,10 @@
     prevArrow: '<div class="slick-prev custom_slick_prev_hero"></div>',
     nextArrow: '<div class="slick-next custom_slick_next_hero"></div>',
     responsive: [
-      { breakpoint: 768, settings: { arrows: false, slidesToShow: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
       {
         breakpoint: 480,
-        settings: { arrows: false, slidesToShow: 1 },
+        settings: {  slidesToShow: 1 },
       },
     ],
   });

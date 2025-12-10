@@ -103,10 +103,19 @@ a {
     height: 100%;
     object-fit: contain;
 }
-.hero-section video{
-height: 100%;
-object-fit: cover;
+
+.hero-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    clip-path: inset(1px 1px) !important;
+    border-radius: 20px;
 }
+
 /* .card--wrapper{
     max-width: 500px;
     width: 100%;
@@ -147,7 +156,7 @@ right: 0;
 
 
 .hero-section {
-    padding: 100px 0 0px;
+    padding: 100px 0 100px;
     display: flex;
     align-items: center;
     /* min-height: calc(100vh - 126px - 67px); */
@@ -975,16 +984,7 @@ nav.notFixed {
 }
 
 
-#background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    clip-path: inset(1px 1px) !important;
-}
+
 
 
 .make_box {
@@ -1698,8 +1698,21 @@ nav.notFixed {
     .testimonial-card {
         min-height: 401px;
     }
+    .hero-section .slick-track {
+        height: 290px;
+    }
+    .custom_slick_prev_hero,.custom_slick_prev_hero.slick-prev:hover,
+    .custom_slick_next_hero,.custom_slick_next_hero.slick-next:hover{
+        height: 30px !important;
+        width: 30px !important;
+    }
 }
 @media screen and (max-width: 992px) {
+
+    .hero-section .slick-track{height: 200px;}
+    .hero-section  .slick-prev{
+        left: unset !important;
+    }
    .ai-expertise .tab-pane .card-row{
        flex-wrap: wrap;
        gap: 15px;
@@ -1774,10 +1787,12 @@ nav.notFixed {
  .ai-expertise .tab-pane .card-row .main-card{
         width: 100%;
     }
-
-    .hero-section {
-        padding: 100px 0 40px;
+    .hero-section .slick-track {
+        height: 260px;
     }
+    /* .hero-section {
+        padding: 100px 0 40px;
+    } */
     .hero-para {
         font-size: 15px;
     }
