@@ -17,6 +17,42 @@
     ],
   });
 
+  // Handle video pause/play on slider change to prevent jerking
+  $('.hero-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    if (currentSlide === 0) { // Video is on slide 0
+      const video = document.getElementById('background-video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0; // Reset to start to prevent jerking
+      }
+    }
+  });
+
+  $('.hero-slider').on('afterChange', function(event, slick, currentSlide) {
+    if (currentSlide === 0) { // Video is on slide 0
+      const video = document.getElementById('background-video');
+      if (video) {
+        video.currentTime = 0; // Reset to start
+        video.muted = true;
+        video.play().catch(() => {
+          video.muted = true;
+          video.play();
+        });
+      }
+    }
+  });
+
+  // Autoplay video on page load since slider starts on slide 0
+  const video = document.getElementById('background-video');
+  if (video) {
+    video.addEventListener('canplay', () => {
+      video.muted = true;
+      video.play().catch(() => {
+        video.muted = true;
+        video.play();
+      });
+    });
+  }
 
 document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
     tab.addEventListener('mouseenter', () => {
