@@ -50,20 +50,20 @@
                 <a href="./index.html" class="nav-link" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="./index.html#services">Services</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#ai">Artificial intelligence</a>
+                <a class="nav-link" href="./index.html#ai">Artificial intelligence</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="#success">Success Stories</a>
+                <a class="nav-link" href="./index.html#success">Success Stories</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="./index.html#about">About</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/blog.html">Blog</a>
+                <a class="nav-link" href="./blog.html">Blog</a>
                 </li>
             </ul>
             <!-- Demo button -->
@@ -105,14 +105,14 @@
             <!-- Blog cards will be loaded dynamically from JSON -->
         </div>
 
-        <div class="sidebar">
+        <!-- <div class="sidebar">
             <img src="./images/blog/img4.png" alt="Join Our Community" class="sidebar-image top-ad-image">
 
             <div class="sidebar-box comptia-ad">
                 <div class="ad-logo">ComInfo</div>
                 <div class="ad-tag">AUTHORIZED PARTNER</div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- pagination -->
@@ -174,12 +174,12 @@
           <div class="footer_div">
             <h5>Quick Links</h5>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#client">Clients</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#success">Success Stories</a></li>
-              <li><a href="/blog.html">Blog</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html#client">Clients</a></li>
+              <li><a href="./index.html#services">Services</a></li>
+              <li><a href="./index.html#success">Success Stories</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./index.html#about">About</a></li>
             </ul>
           </div>
         </div>
@@ -189,10 +189,10 @@
           <div class="footer_div">
             <h5>Services</h5>
             <ul>
-              <li><a href="#services">Analytics</a></li>
-              <li><a href="#services">Automation</a></li>
-              <li><a href="#services">Modernization</a></li>
-              <li><a href="#fabric">Microsoft Fabric</a></li>
+              <li><a href="./index.html#services">Analytics</a></li>
+              <li><a href="./index.html#services">Automation</a></li>
+              <li><a href="./index.html#services">Modernization</a></li>
+              <li><a href="./index.html#fabric">Microsoft Fabric</a></li>
             </ul>
           </div>
         </div>
@@ -253,6 +253,15 @@
 <script>
 // Blog data in JSON format
 const blogsData = [
+  {
+        id: 19,
+        title: "Test Blog",
+        excerpt: "When people hear the term analytics, they often think of corporations tracking sales, marketing campaigns, or customer behavior. While those applications are important, food banks use analytics in ways that are fundamentally different from the typical enterprise environment. Their mission-driven focus, resource constraints, and community impact change not only what data is collected, but how it is used to drive decisions.",
+        image: "./images/blog/img11.png",
+        org: "Cominfo",
+        writer: "Imad Rehman",
+        link: "https://www.linkedin.com/pulse/how-food-bank-analytics-differ-from-traditional-imad-rehman-1mwxe?trackingId=4ilQ08WWT0Sa5170Yx3yWw%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_content_view%3BQQ8K%2Fc1aSIWJBHvYBm%2BYWA%3D%3D"
+    },
     {
         id: 1,
         title: "Choosing the Right Analytics Vendor",
@@ -434,20 +443,17 @@ function renderBlogCard(blog) {
                 <div class="blog-actions">
                     <ul class="social-share">
                         <li><a href="#" class="share-icon" style="font-weight: 600; font-size: 16px; text-decoration: none;">Share:</a></li>
-                        <li><a href="#" class="share-icon">
+                        <li><a href="https://www.facebook.com/cominfoinc/" target="_blank" class="share-icon">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M13.2272 0H0.7728C0.3458 0 0 0.3458 0 0.7728V13.2272C0 13.6542 0.3458 14 0.7728 14H7.4774V8.5785H5.6532V6.4659H7.4774V4.907C7.4774 3.0982 8.582 2.114 10.1955 2.114C10.9683 2.114 11.6319 2.1714 11.8258 2.1973V4.0873H10.7072C9.8294 4.0873 9.66 4.5045 9.66 5.1163V6.4652H11.7523L11.4793 8.5778H9.6593V14H13.2272C13.6542 14 14 13.6542 14 13.2272V0.7728C14 0.3458 13.6542 0 13.2272 0Z" fill="currentColor"/></svg>
                         </a></li>
-                        <li><a href="#" class="share-icon">
+                        <li><a href="https://x.com/cominfoinc/" target="_blank" class="share-icon">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 -0.145996C0.896875 -0.145996 0 0.769564 0 1.89567V12.104C0 13.2301 0.896875 14.1457 2 14.1457H12C13.1031 14.1457 14 13.2301 14 12.104V1.89567C14 0.769564 13.1031 -0.145996 12 -0.145996H2ZM11.2844 2.53369L8.04062 6.31716L11.8562 11.466H8.86875L6.53125 8.34287L3.85313 11.466H2.36875L5.8375 7.41774L2.17812 2.53369H5.24062L7.35625 5.38883L9.8 2.53369H11.2844ZM10.1031 10.56L4.79375 3.39183H3.90937L9.27812 10.56H10.1H10.1031Z" fill="currentColor"/></svg>
                         </a></li>
-                        <li><a href="#" class="share-icon">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.1111 0C11.1425 0 12.1317 0.409721 12.861 1.13903C13.5903 1.86834 14 2.85749 14 3.88889V10.1111C14 11.1425 13.5903 12.1317 12.861 12.861C12.1317 13.5903 11.1425 14 10.1111 14H3.88889C2.85749 14 1.86834 13.5903 1.13903 12.861C0.409721 12.1317 0 11.1425 0 10.1111V3.88889C0 2.85749 0.409721 1.86834 1.13903 1.13903C1.86834 0.409721 2.85749 0 3.88889 0H10.1111ZM7 3.88889C6.17488 3.88889 5.38356 4.21667 4.80011 4.80011C4.21667 5.38356 3.88889 6.17488 3.88889 7C3.88889 7.82512 4.21667 8.61644 4.80011 9.19989C5.38356 9.78333 6.17488 10.1111 7 10.1111C7.82512 10.1111 8.61644 9.78333 9.19989 9.19989C9.78333 8.61644 10.1111 7.82512 10.1111 7C10.1111 6.17488 9.78333 5.38356 9.19989 4.80011C8.61644 4.21667 7.82512 3.88889 7 3.88889ZM7 5.44444C7.41256 5.44444 7.80822 5.60833 8.09994 5.90006C8.39167 6.19178 8.55556 6.58744 8.55556 7C8.55556 7.41256 8.39167 7.80822 8.09994 8.09994C7.80822 8.39167 7.41256 8.55556 7 8.55556C6.58744 8.55556 6.19178 8.39167 5.90006 8.09994C5.60833 7.80822 5.44444 7.41256 5.44444 7C5.44444 6.58744 5.60833 6.19178 5.90006 5.90006C6.19178 5.60833 6.58744 5.44444 7 5.44444ZM10.5 2.72222C10.2937 2.72222 10.0959 2.80417 9.95003 2.95003C9.80417 3.09589 9.72222 3.29372 9.72222 3.5C9.72222 3.70628 9.80417 3.90411 9.95003 4.04997C10.0959 4.19583 10.2937 4.27778 10.5 4.27778C10.7063 4.27778 10.9041 4.19583 11.05 4.04997C11.1958 3.90411 11.2778 3.70628 11.2778 3.5C11.2778 3.29372 11.1958 3.09589 11.05 2.95003C10.9041 2.80417 10.7063 2.72222 10.5 2.72222Z" fill="currentColor"/></svg>
-                        </a></li>
-                        <li><a href="#" class="share-icon">
+                        <li><a href="https://www.linkedin.com/company/cominfoinc/" target="_blank" class="share-icon">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4444 0C12.857 0 13.2527 0.163888 13.5444 0.455612C13.8361 0.747335 14 1.143 14 1.55556V12.4444C14 12.857 13.8361 13.2527 13.5444 13.5444C13.2527 13.8361 12.857 14 12.4444 14H1.55556C1.143 14 0.747335 13.8361 0.455612 13.5444C0.163888 13.2527 0 12.857 0 12.4444V1.55556C0 1.143 0.163888 0.747335 0.455612 0.455612C0.747335 0.163888 1.143 0 1.55556 0H12.4444ZM12.0556 12.0556V7.93333C12.0556 7.26086 11.7884 6.61593 11.3129 6.14042C10.8374 5.66492 10.1925 5.39778 9.52 5.39778C8.85889 5.39778 8.08889 5.80222 7.71556 6.40889V5.54556H5.54556V12.0556H7.71556V8.22111C7.71556 7.62222 8.19778 7.13222 8.79667 7.13222C9.08546 7.13222 9.36242 7.24694 9.56663 7.45115C9.77083 7.65536 9.88556 7.93232 9.88556 8.22111V12.0556H12.0556ZM3.01778 4.32444C3.36433 4.32444 3.69668 4.18678 3.94173 3.94173C4.18678 3.69668 4.32444 3.36433 4.32444 3.01778C4.32444 2.29444 3.74111 1.70333 3.01778 1.70333C2.66917 1.70333 2.33483 1.84182 2.08833 2.08833C1.84182 2.33483 1.70333 2.66917 1.70333 3.01778C1.70333 3.74111 2.29444 4.32444 3.01778 4.32444ZM4.09889 12.0556V5.54556H1.94444V12.0556H4.09889Z" fill="currentColor"/></svg>
                         </a></li>
                     </ul>
-                    <a href="${blog.link}" class="read-more-button">Read more</a>
+                    <a href="${blog.link}" class="read-more-button" target="_blank">Read more</a>
                 </div>
             </div>
         </div>

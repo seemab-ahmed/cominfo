@@ -2125,7 +2125,7 @@ nav.notFixed {
 .blog-image {
     width: 100%;
     height: 192px; 
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     transition: box-shadow 400ms ease-in-out;
 }
@@ -2277,7 +2277,7 @@ nav.notFixed {
     }
     
     .blog-image {
-        height: 208px; 
+        height: 208px;
     }
 
     .sidebar {
