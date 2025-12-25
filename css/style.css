@@ -79,6 +79,11 @@ a {
 }
 /* hero- styles here  */
 /* hero slider */
+
+header{
+    position: relative;
+    z-index: 99;
+}
 .custom_slick_prev_hero {
     background: url('../images/icons/arrow_left.png') !important;
     background-repeat: no-repeat !important;
@@ -107,7 +112,7 @@ a {
 .hero-section video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -1680,6 +1685,141 @@ nav.notFixed {
     width: 100%;
     }
 /* Our AI Expertise section css end here */
+
+
+
+/* hero slider section css */
+/* .hero-slider-section .slick-track {
+    height: 100%;
+
+} */
+.hero-slider-section.hero-section{
+    height: 100vh !important;
+    padding: 0 !important;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.hero-slider-section .bottom-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 82px !important;
+    z-index: 3;
+}
+.hero-slider-section .hero-slide {
+    padding: 100px 0;
+    height:100vh !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.hero-slider-section .hero-slide-1{
+background: url('../images/background/top_bg.png') no-repeat center;
+background-size: cover;
+}
+.hero-slider-section .hero-slide-2{
+background: url('../images/background/slide-1.webp') no-repeat center;
+background-size: cover;
+}
+.hero-slider-section .hero-top-text .color {color: #E04D1B;}
+/* .hero-slide-1 .hero-top-text,
+.hero-slide-1 .hero-para, */
+.hero-slide-2 .hero-top-text,
+.hero-slide-2 .hero-para{color:white !important}
+.hero-slider-section .video-wrapper {
+    margin-left: auto;
+    height: 400px !important;
+}
+.hero-slider-section .hero-slide .container{
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+.hero-slider-section  .text--col{
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto; */
+    width: 50%;
+    height: fit-content !important;
+    z-index: 1;
+
+}
+.hero-slider-section .slick-dots {
+    bottom: 25px;
+}
+.hero-slider-section  .slick-dots li button:before {
+    font-size: 20px !important;
+     color:#ee5b25 !important;
+}
+.hero-slider-section img,
+.hero-slider-section video{
+width: 100%;
+height: 100%;
+}
+ .hero-slider-section .slick-next, .hero-slider-section .slick-prev {
+    bottom: unset !important;
+    top: 50% !important;
+    z-index: 2 !important;
+}
+.hero-slider-section.hero-section .slick-track {
+    height: auto !important;
+}
+.hero-slider-section .slick-next{
+    /* right: 14% !important; */
+    right: 5px !important;
+}
+    .hero-slider-section .slick-prev {
+        right: unset !important;
+        left: 5px !important;
+    } 
+   .hero-slider-section  .custom_slick_prev_hero {
+    background: url(../images/icons/arrow_left2.png) no-repeat center !important;
+   
+    }
+ .hero-slider-section   .custom_slick_next_hero {
+    background: url(../images/icons/arrow_right2.png) no-repeat center !important;
+  }
+    .hero-slider-section  .custom_slick_prev_hero:hover {
+    background: url(../images/icons/arrow_left2.png) no-repeat center !important;
+   
+    }
+ .hero-slider-section   .custom_slick_next_hero:hover {
+    background: url(../images/icons/arrow_right2.png) no-repeat center !important;
+  }
+  .latest-hero-slider{
+    position: relative;
+  }
+  .latest-hero-slider .hero-slide--2 .hero-top-text,
+  .latest-hero-slider .hero-slide--3 .hero-top-text,
+  .latest-hero-slider .hero-slide--4 .hero-top-text,
+  .latest-hero-slider .hero-slide--5 .hero-top-text {
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 300;
+}
+.latest-hero-slider .hero-slider{
+    z-index: 3;
+    position: relative;
+}
+.hero-slider-section.latest-hero-slider .slick-dots {
+    bottom: 25px;
+}
+.latest-hero-slider .hero-slide--2{
+    background: linear-gradient(90deg, #6CE5DB 65%, #96E89E 100%);
+}
+.latest-hero-slider .hero-slide--5{
+    background-color: #3091BD;
+}
+.latest-hero-slider .hero-slide--5  .hero-top-text{color: #fff;}
+.latest-hero-slider .hero-slide--3{
+    background: linear-gradient(135deg, #CEF6F3, #D9FBF8);
+}
+.latest-hero-slider .hero-slider {
+    margin: 0 !important;
+}
 @media screen and (max-width: 1440) {
     .testimonial-card {
         min-height: 376px;
@@ -1698,7 +1838,15 @@ nav.notFixed {
     .testimonial-card {
         min-height: 401px;
     }
-    .hero-section .slick-track {
+    /* .hero-slider-section .slick-next{
+    right: -40px !important;
+}
+    .hero-slider-section .slick-prev {
+        left: -40px !important;
+    } */
+        /* .hero-section.hero-slider-section  .slick-track{height: 100% !important;} */
+   .hero-slider-section .video-wrapper,
+        .hero-section .slick-track {
         height: 290px;
     }
     .custom_slick_prev_hero,.custom_slick_prev_hero.slick-prev:hover,
@@ -1708,11 +1856,21 @@ nav.notFixed {
     }
 }
 @media screen and (max-width: 992px) {
-
+    .hero-slider-section .video-wrapper,
     .hero-section .slick-track{height: 200px;}
     .hero-section  .slick-prev{
         left: unset !important;
     }
+    .hero-slider-section .slick-next{
+    right: 5% !important;
+}
+.hero-slider-section .slick-prev {
+    right: 17% !important;
+}
+.hero-slider-section .slick-next, .hero-slider-section .slick-prev {
+    top: unset !important;
+    bottom: 10px;
+}
    .ai-expertise .tab-pane .card-row{
        flex-wrap: wrap;
        gap: 15px;
@@ -1778,9 +1936,33 @@ nav.notFixed {
     .testimonial-card {
         min-height: 380px;
     }
+    .hero-slider-section.latest-hero-slider .slick-dots{
+        bottom:60px;
+}
 }
 
 @media (max-width: 767px) {
+    .hero-slider-section .hero-slide .container{
+        flex-direction: column;
+    }
+     .hero-slider-section .hero-slide,
+    .hero-slider-section.hero-section{
+    height: auto !important;
+    }
+        .hero-slider-section .video-wrapper,
+    .hero-section .slick-track{height: auto;}
+        /* .hero-slider-section .slick-next, .hero-slider-section .slick-prev {
+        bottom: -90px;
+    } */
+    .hero-slider-section  .slick-dots li button:before {
+    font-size: 12px !important;
+}
+   .hero-slider-section .text--col {
+    }
+    .hero-slider-section  .text--col,
+    .hero-slider-section .video-wrapper{
+        width:100%;
+    }
     .ai-expertise{
         padding: 40px 0;
     }
