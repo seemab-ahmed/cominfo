@@ -1,11 +1,14 @@
 
   $(".hero-slider").slick({
-    dots: false,
+    dots: true,
+    // fade: true,
     infinite: true,
     draggable: true,
-    speed: 300,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,          // enable auto sliding
+    autoplaySpeed: 3000,
     prevArrow: '<div class="slick-prev custom_slick_prev_hero"></div>',
     nextArrow: '<div class="slick-next custom_slick_next_hero"></div>',
     responsive: [
