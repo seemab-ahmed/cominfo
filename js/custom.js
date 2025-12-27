@@ -1,10 +1,10 @@
 
   $(".hero-slider").slick({
     dots: true,
-    // fade: true,
+    fade: true,
     infinite: true,
     draggable: true,
-    speed: 1000,
+    speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,          // enable auto sliding
