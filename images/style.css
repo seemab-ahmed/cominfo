@@ -130,7 +130,6 @@ header{
     top: unset;
     bottom: -70px;
     z-index: 10;
-    display: none !important;
 }
 .hero-section .slick-next{
 right: 0;
@@ -1724,7 +1723,7 @@ background-size: cover;
 background: url('../images/background/slide-1.webp') no-repeat center;
 background-size: cover;
 }
-.hero-slider-section .hero-top-text .color {color: #EE5B25;}
+.hero-slider-section .hero-top-text .color {color: #E04D1B;}
 /* .hero-slide-1 .hero-top-text,
 .hero-slide-1 .hero-para, */
 .hero-slide-2 .hero-top-text,
